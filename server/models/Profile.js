@@ -37,7 +37,8 @@ const ProfileSchema = new mongoose.Schema({
   custom_html: String,
   custom_domain: {
     type: String,
-    unique: true
+    unique: true,
+    sparse: true
   },
   theme: {
     type: mongoose.Schema.Types.ObjectId,
