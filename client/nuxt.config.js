@@ -92,7 +92,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: process.env.BASE_URL || 'https://api.singlelink.co' /* REMOVE BEFORE PRODUCTION */
+    baseURL: process.env.BASE_URL || 'https://api.tinypage.app' /* REMOVE BEFORE PRODUCTION */
   },
   /*
   ** Build configuration

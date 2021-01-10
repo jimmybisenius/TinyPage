@@ -11,14 +11,14 @@
           </div>
           <div class="flex flex-col w-1/2">
             <label class="font-medium text-sm text-gray-800" for="email">Subtitle</label>
-            <input class="p-2 mt-2 text-sm border-solid border-gray-300 rounded border" id="email" type="email" placeholder="e.g. Developer at Neutron from Raleigh NC" v-model="user.active_profile.subtitle"/>
+            <input class="p-2 mt-2 text-sm border-solid border-gray-300 rounded border" id="email" type="text" placeholder="e.g. Developer at Neutron from Raleigh NC" v-model="user.active_profile.subtitle"/>
           </div>
         </div>
         <div class="flex flex-row mb-4">
           <div class="flex flex-col w-1/2 mr-3">
             <label class="font-medium text-sm text-gray-800" for="handle">Handle</label>
             <div class="flex flex-row rounded border border-solid border-gray-300 text-sm mt-2 overflow-hidden">
-              <span class="flex p-2 bg-gray-100 border text-gray-700 border-solid border-gray-300 border-t-0 border-l-0 border-b-0">singlelink.co/u/</span>
+              <span class="flex p-2 bg-gray-100 border text-gray-700 border-solid border-gray-300 border-t-0 border-l-0 border-b-0">tinypage.app/u/</span>
               <input class="p-2 flex-grow" id="handle" type="text" placeholder="e.g. janedoe" v-model="user.active_profile.handle"/>
             </div>
           </div>

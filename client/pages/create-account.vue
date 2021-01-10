@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center justify-center bg-gray-50 min-h-screen">
     <section class="flex items-center justify-center flex-col mt-auto w-screen">
-      <img src="/Icon.svg"/>
+      <img src="/Tiny_Pages.png"  style="width:65px;border-radius:4px;"/>
       <h1 class="font-semibold text-3xl mt-2">Create a new account</h1>
       <p class="text-gray-700 text-sm">Or, <a class="text-indigo-600 hover:text-indigo-700" href="/">sign in to your
         existing account</a></p>

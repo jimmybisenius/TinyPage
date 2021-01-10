@@ -18,7 +18,7 @@
           <div class="flex flex-col w-1/2 mr-3">
             <label class="font-medium text-sm text-gray-800" for="handle">Handle</label>
             <div class="flex flex-row rounded border border-solid border-gray-300 text-sm mt-2 overflow-hidden">
-              <span class="flex p-2 bg-gray-100 border text-gray-700 border-solid border-gray-300 border-t-0 border-l-0 border-b-0">singlelink.co/u/</span>
+              <span class="flex p-2 bg-gray-100 border text-gray-700 border-solid border-gray-300 border-t-0 border-l-0 border-b-0">tinypage.app/u/</span>
               <input class="p-2 flex-grow" id="handle" type="text" placeholder="e.g. janedoe" v-model="user.active_profile.handle"/>
             </div>
           </div>
@@ -44,7 +44,7 @@
     <div class="flex flex-row p-6 bg-white shadow rounded justify-center items-center w-full mb-8">
       <div class="flex flex-col mr-auto w-1/2">
         <h2 class="text-gray-800 font-semibold text-lg w-full">Delete your account</h2>
-        <p class="text-gray-600 font-medium">Done with Singlelink? Click the button on your right to delete your account and all related info.</p>
+        <p class="text-gray-600 font-medium">Done with TinyPage? Click the button on your right to delete your account and all related info.</p>
       </div>
       <button type="button" @click="open_modal" class="ml-2 flex p-3 text-sm text-white text-center bg-red-600 hover:bg-red-700 rounded font-semibold w-1/3 justify-center align-center">Delete your account</button>
     </div>

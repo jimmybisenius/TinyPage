@@ -3,8 +3,8 @@
     <section class="flex w-full items-center p-8 md:p-12 bg-white justify-center border border-r-0 border-l-0 border-b-0 border-t-8 border-indigo-600">
       <div class="w-11/12 max-w-6xl flex flex-col md:flex-row">
         <div class="flex flex-col md:mr-4 text-center justify-center md:justify-start md:text-left">
-          <h1 class="text-3xl font-medium mb-2">Singlelink global analytics</h1>
-          <p class="text-lg text-gray-700 mb-2">A public dashboard of all available Singlelink member analytics.</p>
+          <h1 class="text-3xl font-medium mb-2">TinyApp global analytics</h1>
+          <p class="text-lg text-gray-700 mb-2">A public dashboard of all available TinyApp member analytics.</p>
           <span class="text-gray-500 mr-4 mb-4 md:mb-0">Last updated on {{ new Date().toLocaleString('en-US') }}</span>
         </div>
         <div class="flex flex-col items-center justify-center md:ml-auto mt-4 md:mt-0">

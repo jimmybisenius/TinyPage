@@ -24,7 +24,7 @@
            :src="profile.image_url || user.avatar_url || 'https://www.gravatar.com/avatar/' + user.hash"/>
       <h1 class="text-black font-semibold text-2xl sl-headline">{{ profile.headline || user.name }}</h1>
       <h3 class="text-gray-600 mb-4 sl-subtitle">{{ profile.subtitle }}</h3>
-      <a :href="'https://api.singlelink.co/analytics/link/' + link._id" v-for="link in links" class="w-full">
+      <a :href="'https://api.tinypage.app/analytics/link/' + link._id" v-for="link in links" class="w-full">
         <div
           class="rounded shadow bg-white p-4 w-full font-medium mb-3 nc-link sl-item flex items-center justify-center flex-col"
           :style="link.custom_css">
@@ -111,7 +111,7 @@ export default {
       return this.age_verification = false;
     },
     reject_age_verification: function () {
-      return window.location.href = "https://singlelink.co";
+      return window.location.href = "https://tinypage.app";
     },
   },
   head: function() {
@@ -141,7 +141,7 @@ export default {
         {
           hid: 'og:image',
           name: 'og:image',
-          content: 'https://api.singlelink.co/profile/thumbnail/' + this.$route.path.replace('/u/', '')
+          content: 'https://api.tinypage.app/profile/thumbnail/' + this.$route.path.replace('/u/', '')
         }
       ],
     };

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center justify-center bg-gray-100 min-h-screen">
     <section class="flex items-center justify-center flex-col mt-auto w-screen">
-      <img src="/Icon.svg"/>
+      <img src="/Tiny_Pages.png"/>
       <h1 class="font-semibold text-3xl mt-2">Request a password reset</h1>
       <p class="text-gray-700 text-sm">Remember your password? <a class="text-indigo-600 hover:text-indigo-700" href="/create-account">Login</a></p>
       <div v-if="this.error" class="flex flex-row p-2 mt-4 mb-2 bg-orange-200 text-orange-600 rounded w-11/12 max-w-sm justify-center items-center text-sm border border-orange-300 shadow-sm">
@@ -23,7 +23,7 @@
         <button type="button" @click="request_reset" class="mt-2 w-full p-3 text-center text-sm text-white bg-indigo-600 hover:bg-indigo-700 rounded font-semibold">Request reset link</button>
       </form>
     </section>
-    <section class="flex text-center text-gray-600 text-sm mt-auto mb-4">All rights reserved.</br>Copyright ©2020 Neutron Creative Inc.</section>
+    <section class="flex text-center text-gray-600 text-sm mt-auto mb-4">All rights reserved.</br>Copyright ©2021 TinyApp</section>
   </div>
 </template>
 
