@@ -19,7 +19,7 @@ module.exports = (req, res) => {
     req.user.active_profile.custom_domain = userDomain.host;
 
     reverseProxy.register(userDomain.host, "127.0.0.1:4444");
-  } else if ((typeof req.user.active_profile.custom_domain) !== undefined) {
+  } else if(req.user.active_profile.custom_domain) { //else if ((typeof req.user.active_profile.custom_domain) !== undefined) {
     req.user.active_profile.custom_domain = null;
   }
 
