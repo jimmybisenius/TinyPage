@@ -25,14 +25,14 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: 'Singlelink - A free & open-source Linktree alternative',
+    title: 'TinyPage - Tiny landing pages in seconds',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {
         hid: 'description',
         name: 'description',
-        content: 'One link for all your content, open-sourced via GPL v3 and built with NuxtJS, MongoDB, and NodeJS.'
+        content: 'Tiny landing pages in seconds.'
       },
       {
         hid: 'og:image',
@@ -42,12 +42,12 @@ export default {
       {
         hid: 'og:title',
         name: 'og:title',
-        content: 'Singlelink - A free & open-source Linktree alternative'
+        content: 'TinyPage - Tiny landing pages in seconds'
       },
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'One link for all your content, open-sourced via GPL v3 and built with NuxtJS, MongoDB, and NodeJS.'
+        content: 'Tiny landing pages in seconds.'
       },
     ],
     link: [
