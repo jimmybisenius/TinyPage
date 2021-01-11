@@ -34,11 +34,11 @@ export default {
         name: 'description',
         content: 'Tiny landing pages in seconds.'
       },
-      {
+      /*{
         hid: 'og:image',
         name: 'og:image',
         content: 'https://singlelink.co/social-hero.png'
-      },
+      },*/
       {
         hid: 'og:title',
         name: 'og:title',
