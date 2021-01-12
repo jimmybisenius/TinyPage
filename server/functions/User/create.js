@@ -9,6 +9,9 @@ const Profile = mongoose.model('Profile');
 module.exports = (req, res) => {
   if (!req.body.email) return res.status(400).send('Missing email');
   if (!req.body.password) return res.status(400).send('Missing password');
+
+  req.body.email = req.body.email.toLowerCase();
+
   User.findOne({email: req.body.email}, function (err, user) {
     if (err) return res.status(500).send(err);
     if (user) return res.status(400).send('User with that email address already exists');

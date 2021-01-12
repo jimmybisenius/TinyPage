@@ -10,6 +10,8 @@ module.exports = (req, res) => {
   if (!req.body.email)
     return res.status(400).send('Missing email');
 
+  req.body.email = req.body.email.toLowerCase();
+
   User.findOne({email: req.body.email}).exec(function (err, user) {
     if (err)
       return res.status(500).send(err);
