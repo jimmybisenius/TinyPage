@@ -55,6 +55,7 @@ cd jimmybisenius/TinyPage
 
 # Install necessary dependencies
 npm install
+sudo npm install -g nuxt-start
 
 # Run first build
 npm run build
@@ -139,7 +140,7 @@ tmux attach
 git pull
 
 # Rebuild Nuxt JS
-nuxt build
+npm run build
 
 # Restart server session
 nuxt-start ./ -H <your-client-ip> -p 80
