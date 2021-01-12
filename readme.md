@@ -1,7 +1,7 @@
 <h1 align="center">
     <br>
     <br>
-    <a href="https://singlelink.co"><img src="client/static/Tiny_Pages.png" width="95"/></a>
+    <a href="https://tinypage.app"><img src="client/static/Tiny_Pages.png" width="95"/></a>
     <br>
     <br>
 </h1>
@@ -29,94 +29,154 @@
 
 <p align="center">
   <a href="#get-started">Get started</a> •
+  <a href="#get-started">Development</a> •
+  <a href="#get-started">Deployment</a> •
   <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
 <br>
 
 <!--<img src="www/static/sl-hero-min.gif" alt="Singlelink promotional graphic"/>-->
-<img src="www/static/SingleLink-Larger-Hero.png" alt="Singlelink promotional graphic"/>
+<img src="./client/static/SL-Enterprise-Hero-Wide.png" alt="Singlelink promotional graphic"/>
 
 <br>
 
----------------------
-## Attention
-
-The readme for this repository is severely outdated, but will be updated soon in v2.1.<br>
-For the most up to date info, please visit the future-update branch.
-
----------------------
-<br>
-
-<h2 id="key-features">Key features</h2>
-
-<ul>
-    <li>Link management for unlimited links</li>
-    <li>Unlimited profiles per account</li>
-    <li>Fully customizable profiles with custom CSS/HTML</li>
-    <li>Sensitive content warnings for profiles with NSFW content</li>
-    <li>Page & link tracking with analytics dashboard (coming soon)</li>
-    <li>Custom domain support (coming soon)</li>
-    <li>Self-hosted mode (coming soon)</li>
-</ul>
 
 <h2 id="get-started">Get started</h2>
+Read the following to install the <a href="https://tinypage.app">TinyPage</a> fork of <a href="https:///singlelink.co">Singlelink Enterprise</a> for development for the first time on your local device. Need hosting installation instructions? Contact <a href="mailto:support@neutroncreative.com">Neutron Creative</a>.
+<h3>Client</h3>
 
-<p>There are a few pre-requisites you need to have before hosting Singlelink, seen below.</p>
+```Bash
+# Clone repostiory to local device
+git clone git@github.com:jimmybisenius/TinyPage.git
 
-<ul>
-    <li>A NodeJS server (ex: $5/mo DigitalOcean Droplet)</li>
-    <li>A MongoDB database (ex: Free MongoDB Atlas via GCP)</li>
-    <li>A static file host (ex: Netlify GCDN)</li>
-</ul>
+# Enter client of new project
+cd jimmybisenius/TinyPage
 
-<p>Once you have the following established, it's time to begin installing & configuring your local instance.</p>
-
-<h4>Installing Singlelink on your NodeJS Server</h4>
-
-```bash
-git clone git@github.com:Neutron-Creative/Singlelink-Client.git
-cd Singlelink-Client
+# Install necessary dependencies
 npm install
-```
-<h4>Installing Singlelink on your Static File Host</h4>
 
-```bash
-git clone git@github.com:Neutron-Creative/Singlelink-Client.git
-cd Singlelink-Client/dist
-npm run generate
-# Website can now be hosted directly from Singlelink-Client/dist
-```
+# Run first build
+npm run build
 
-<h4>Creating your configuration file</h4>
-<p><b>NOTE:</b> this configuration profile should be the same across all Singlelink installation locations previously detailed.</p>
+# Start your server
+npm start
 
-```bash
-cd Singlelink-Client
-touch config.js
-echo "{'database':'','secret':'','port':80}" >> config.js
 ```
 
-<h2 id="frequently-asked-questions">Frequently asked questions</h2>
-<p>Coming soon...</p>
+<h3>Server</h3>
 
-<h2 id="credits">Credits</h2>
-Singlelink was built by the following individuals.
-<ul>
-    <li>Jim Bisenius (<a target="_blank" href="https://twitter.com/jim_bisenius">@jim_bisenius</a>)</li>
-    <li>Andrew Boyle (<a target="_blank" href="https://twitter.com/fahlomi">@fahlomi</a>)</li>
-    <li>Navid Kabir (<a target="_blank" href="https://twitter.com/navidk0">@navidk0</a>)</li>
-    <li>Manuhe Abebe (<a target="_blank" href="https://twitter.com/manuhegabebe">@manuhegabebe</a>)</li>
-</ul>
-Currently, Singlelink lacks contributors outside its founders at Neutron Creative, but, you can help.
-Visit the <a target="_blank" href="https://github.com/Neutron-Creative/Singlelink/issues">issues page</a> today and create your first pull request to get featured here!
+```Bash
+# Clone repostiory to local device (don't need to repeat if performed previously for client)
+git clone git@github.com:jimmybiseinus/TinyPage.git
 
-<h2 id="related">Related</h2>
-<p><a target="_blank" href="https://singlelink.co">Singlelink</a> is Neutron Creative product, created and hosted free of charge in the mission of open-source. To learn more about our mission, visit <a href="https://neutroncreative.com" target="_blank">neutroncreative.com</a></p>
+# Enter client of new project
+cd TinyPage/server
+
+# Install necessary dependencies
+npm install
+
+# Generate config from example
+cp config-example.js config.js
+
+# Modify config.js (set API domain to localhost & client domain as neccessary)
+vim config.js
+
+# Install necessary dev dependencies
+sudo npm install -g forever nodemon
+
+# Start your server
+forever start index.js
+
+```
+
+<br>
+
+<h2 id="development">Development</h2>
+<h3>Client</h3>
+<p>Develop on the client if you're lokoing to make changes to the interface or styles of the application.<br>Note, pay attention to the notice below. You'll need to build & start the client before each usage to have your changes reflect properly in the application.</p>
+
+```Bash
+# ---------------------------------------------------------------------------------- #
+# NOTICE: Anytime you make changes, kill the server, rebuild, and restart as follows #
+# ---------------------------------------------------------------------------------- #
+
+# Rebuild application (compiles .vue files into raw html, css, and js)
+npm run build
+
+# Restart server
+npm start
+
+```
+
+<h4>Server</h4>
+<p>Develop on the server if you're looking to make changes to the logic of the application.<br>Developing on the server is a bit simpler, in that there is no "rebuild" process. With nodemon, changes are reloaded live instantaneously.</p>
+
+```Bash
+# Start nodemon
+nodemon index.js
+```
+
+<br>
+
+<h2 id="deployment">Deployment</h2>
+<p>Use the following instructions for deploying changes made locally to your production servers.<br>Note, before following the next steps - ensure you have pushed all changes to the git master branch!</p>
+<h3>Client</h3>
+
+```Bash
+
+# SSH into server
+ssh root@<your-server-ip>
+
+# Enter tmux session (if first time then tmux)
+tmux attach
+
+# Break existing client host session
+# Not to be typed, press both keys simultaneously
+# Ctrl + C
+
+# Pull changes from remote origin master branch
+git pull
+
+# Rebuild Nuxt JS
+nuxt build
+
+# Restart server session
+nuxt-start ./ -H <your-client-ip> -p 80
+
+# Exit tmux session
+# Not to be typed, press both keys simultaneously
+# Ctrl + b
+# Afterwhich, press the following key
+# d
+
+# Exit server, changes are deployed!
+
+
+```
+
+<h3>Server</h3>
+
+``` Bash
+
+# SSH into server
+ssh root@<your-server-ip>
+
+# Enter correct directory
+cd ~/TinyPage/server/
+
+# Pull latest changes from git
+git pull
+
+# Restart server with changes (if first time then forever start index.js)
+forever restart index.js
+
+# Exit server, changes are deployed!
+
+```
 
 <h2 id="license">License</h2>
-<p>Singlelink is a free & open-source link manager built with <a href="https://nuxtjs.org/" target="_blank">NuxtJS</a>, <a target="_blank" href="https://nodejs.org/en/">NodeJS</a>, and <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>.</p>
+<p>TinyPage is an custom-enterprise fork of <a href="https://singlelink.co/" target="_blank">Singlelink</a> by <a href="https://neutroncreative.com" target="_blank">Neutron Creative</a>.</p>
     <p>Copyright (C) 2020  Neutron Creative Inc.</p>
 
     This program is free software: you can redistribute it and/or modify
